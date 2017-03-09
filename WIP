@@ -1,3 +1,10 @@
+var vowels = ["a","e","i","o","u"];
+//console.log('e'.indexOf(vowels));
+//console.log(findVowel("a"));
+//if (word.indexOf(letter) === 0) {
+
+
+
 var wordArray = [];
 var findVowels = function(string){
 	var wordArray = string.split("");
@@ -9,14 +16,14 @@ var findVowels = function(string){
  		wordArray.push("a");
     wordArray.push("y");
     console.log(wordArray);
-  } else if (wordArray[1].match(/[aeiouAEIOU]/) && (wordArray[0] !== "q")){
+  } else if (wordArray[1].match(/[aeiouAEIOU]/)){
   	var firstLetter = wordArray[0];
     wordArray.shift();
     wordArray.push(firstLetter);
     wordArray.push("a");
     wordArray.push("y");
     console.log(wordArray);
-  } else if (wordArray[2].match(/[aeiouAEIOU]/) || (wordArray[0] === "q")){
+  } else if (wordArray[2].match(/[aeiouAEIOU]/)){
     var letterOne = wordArray[0];
     var letterTwo = wordArray[1];
     wordArray.shift();
@@ -42,4 +49,4 @@ var findVowels = function(string){
   }
 }
 
-findVowels("queen");
+findVowels("a1");
